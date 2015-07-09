@@ -29,13 +29,12 @@ public class ControlUnit {
 		bu.setCandidateSlot(name);
 	}
 	
-	public void votingProcess(){
-		//ballotButton.buttonPressed();
-		bu.switchBUState();
-	}
-	
-	public void totalButtonPressed(){
-		bu.findTotalVote();
+	public void votingProcess(String candidateName){
+		ballotButton.buttonPressed(bu);
+		//bu.switchBUState();
+		if(bu.getBUState() == "Active"){
+			bu.vote(candidateName);
+		}
 	}
 	
 	public void switchCUState(){

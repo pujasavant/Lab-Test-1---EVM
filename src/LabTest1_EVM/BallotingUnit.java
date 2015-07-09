@@ -8,6 +8,7 @@ package LabTest1_EVM;
  */
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class BallotingUnit {
 	ArrayList<BallotSlot> slots = new ArrayList<BallotSlot>();
@@ -18,13 +19,24 @@ public class BallotingUnit {
 		slots.add(bs);
 	}
 	
-	public void findTotalVote(){
-		
+	public void vote(String candidateName){
+		Iterator<BallotSlot> itr = slots.iterator();
+		while(itr.hasNext()){
+			BallotSlot bs = itr.next();
+			if(bs.getCandidateName() == candidateName){
+				//vote
+			}
+		}
 	}
 	
-	public void switchBUState(){
+	public String switchBUState(){
 		state.switchBUState(this);
 		System.out.println("BU state: "+state);
+		return state.stateName;
+	}
+	
+	public String getBUState(){
+		return state.stateName;
 	}
 	
 	public void setState(BUState s) {

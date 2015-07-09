@@ -20,8 +20,8 @@ public class ElectronicVotingMachine {
 		CU.addCandidate(name);
 	}
 	
-	public void registerVote(){
-		CU.votingProcess();
+	public void registerVote(String candidateName){
+		CU.votingProcess(candidateName);
 	}
 		
 }
