@@ -6,5 +6,4 @@ public class Button {
 	Button(String buttonValue){
 		this.buttonValue = buttonValue;
 	}
-	
 }

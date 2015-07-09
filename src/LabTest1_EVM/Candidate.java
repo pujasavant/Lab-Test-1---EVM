@@ -21,5 +21,4 @@ public class Candidate {
 		return CandidateName;
 	}
 	
-	
 }
