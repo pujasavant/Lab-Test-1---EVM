@@ -16,6 +16,11 @@ public class BallotingUnit {
 		slots.add(bs);
 	}
 	
+	public void switchBUState(){
+		state.switchBUState(this);
+		System.out.println("BU state: "+state);
+	}
+	
 	public void setState(BUState s) {
 		state = s;
 	}

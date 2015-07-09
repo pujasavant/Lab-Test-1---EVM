@@ -8,8 +8,7 @@ public class Inactive extends BUState{
 
 	@Override
 	public void switchBUState(BallotingUnit bu) {
-		// TODO Auto-generated method stub
-		Active inactive = new Active();
-		bu.setState(inactive);
+		Active active = new Active();
+		bu.setState(active);
 	}
 }

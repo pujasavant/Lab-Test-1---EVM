@@ -12,12 +12,20 @@ public class ControlUnit {
 	Button totalButton = new Button("totalButton");
 	Button resetButton = new Button("resetButton");
 	BallotingUnit bu = new BallotingUnit();
+	CUState CUState;
 	
 	ControlUnit(){
 		
 	}
 	
 	
+	public void switchCUState(){
+		CUState.switchCUState(this);
+		System.out.println("CU state: "+CUState);
+	}
 	
+	public void setCUState(CUState cu){
+		CUState = cu;
+	}
 	
 }
