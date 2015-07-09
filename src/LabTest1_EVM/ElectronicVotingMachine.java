@@ -17,7 +17,11 @@ public class ElectronicVotingMachine {
 	}
 	
 	public void registerCandidate(String name){
-		BU.setCandidateSlot(name);
+		CU.addCandidate(name);
 	}
 	
+	public void registerVote(){
+		CU.votingProcess();
+	}
+		
 }

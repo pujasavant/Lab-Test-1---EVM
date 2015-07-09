@@ -1,10 +1,12 @@
 package LabTest1_EVM;
+
 /**
  * 
  * @author Pooja Savant
  * Roll No.: 1301
  *
  */
+
 import java.util.ArrayList;
 
 public class BallotingUnit {
@@ -14,6 +16,10 @@ public class BallotingUnit {
 	public void setCandidateSlot(String name){
 		BallotSlot bs = new BallotSlot(name);
 		slots.add(bs);
+	}
+	
+	public void findTotalVote(){
+		
 	}
 	
 	public void switchBUState(){

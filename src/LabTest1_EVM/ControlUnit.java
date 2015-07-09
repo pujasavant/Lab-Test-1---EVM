@@ -1,5 +1,7 @@
 package LabTest1_EVM;
 
+import java.util.ArrayList;
+
 /**
  * 
  * @author Pooja Savant
@@ -8,16 +10,33 @@ package LabTest1_EVM;
  */
 
 public class ControlUnit {
-	Button BallotButton = new Button("BallotButon");
-	Button totalButton = new Button("totalButton");
-	Button resetButton = new Button("resetButton");
+	BallotButton ballotButton;
+	Button totalButton;
+	Button resetButton;
 	BallotingUnit bu = new BallotingUnit();
 	CUState CUState;
+	ArrayList<Candidate> candidates = new ArrayList<Candidate>();
 	
 	ControlUnit(){
-		
+		ballotButton = new BallotButton();
+		totalButton = new Button("totalButton");
+		resetButton = new Button("resetButton");
 	}
 	
+	public void addCandidate(String name){
+		Candidate c = new Candidate(name);
+		candidates.add(c);
+		bu.setCandidateSlot(name);
+	}
+	
+	public void votingProcess(){
+		//ballotButton.buttonPressed();
+		bu.switchBUState();
+	}
+	
+	public void totalButtonPressed(){
+		bu.findTotalVote();
+	}
 	
 	public void switchCUState(){
 		CUState.switchCUState(this);
