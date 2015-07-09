@@ -4,4 +4,5 @@ public class ElectronicVotingMachine {
 	ControlUnit CU;
 	BallotingUnit BU;
 	
+	
 }
