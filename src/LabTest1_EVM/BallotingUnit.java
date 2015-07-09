@@ -19,4 +19,5 @@ public class BallotingUnit {
 	public void setState(BUState s) {
 		state = s;
 	}
+	
 }

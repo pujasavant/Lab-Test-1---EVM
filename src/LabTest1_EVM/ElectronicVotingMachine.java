@@ -19,4 +19,5 @@ public class ElectronicVotingMachine {
 	public void registerCandidate(String name){
 		BU.setCandidateSlot(name);
 	}
+	
 }
